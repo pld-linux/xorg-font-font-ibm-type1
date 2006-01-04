@@ -1,17 +1,16 @@
 Summary:	ibm-type1 font
 Summary(pl):	Font ibm-type1
 Name:		xorg-font-font-ibm-type1
-Version:	0.99.1
+Version:	1.0.0
 Release:	0.1
-License:	MIT
+License:	distributable (see COPYING)
 Group:		Fonts
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/font/font-ibm-type1-%{version}.tar.bz2
-# Source0-md5:	8c881ca1f01909222e5cbe4abe2aeea2
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/font/font-ibm-type1-%{version}.tar.bz2
+# Source0-md5:	8e8733051371e2b51123376b49f5d3ea
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	fontconfig
-BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	t1utils
 BuildRequires:	xorg-app-mkfontdir
 BuildRequires:	xorg-app-mkfontscale
