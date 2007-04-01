@@ -1,11 +1,11 @@
-Summary:	ibm-type1 font
-Summary(pl.UTF-8):	Font ibm-type1
+Summary:	IBM Courier font in Type1 format
+Summary(pl.UTF-8):	Font IBM Courier w formacie Type1
 Name:		xorg-font-font-ibm-type1
 Version:	1.0.0
-Release:	0.1
+Release:	1
 License:	distributable (see COPYING)
 Group:		Fonts
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/font/font-ibm-type1-%{version}.tar.bz2
+Source0:	http://xorg.freedesktop.org/releases/individual/font/font-ibm-type1-%{version}.tar.bz2
 # Source0-md5:	8e8733051371e2b51123376b49f5d3ea
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
@@ -20,10 +20,10 @@ Requires:	%{_fontsdir}/Type1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-ibm-type1 font.
+IBM Courier font in Type1 format.
 
 %description -l pl.UTF-8
-Font ibm-type1.
+Font IBM Courier w formacie Type1.
 
 %prep
 %setup -q -n font-ibm-type1-%{version}
@@ -54,6 +54,13 @@ done
 sed -e '1d;s/\.pfa /.pfb /' fonts.scale > fonts.scale.ibm
 rm -f fonts.scale fonts.dir fonts.cache-1
 
+cat > Fontmap.ibm <<EOF
+/Courier                                 (cour.pfb)     ;
+/Courier-Bold                            (courb.pfb)    ;
+/Courier-BoldItalic                      (courbi.pfb)   ;
+/Courier-Italic                          (couri.pfb)    ;
+EOF
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -69,3 +76,4 @@ fontpostinst Type1
 %{_fontsdir}/Type1/*.pfb
 %{_fontsdir}/Type1/afm/*.afm
 %{_fontsdir}/Type1/fonts.scale.ibm
+%{_fontsdir}/Type1/Fontmap.ibm
