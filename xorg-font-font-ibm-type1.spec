@@ -1,12 +1,12 @@
 Summary:	IBM Courier font in Type1 format
 Summary(pl.UTF-8):	Font IBM Courier w formacie Type1
 Name:		xorg-font-font-ibm-type1
-Version:	1.0.1
+Version:	1.0.2
 Release:	1
 License:	distributable (see COPYING)
 Group:		Fonts
 Source0:	http://xorg.freedesktop.org/releases/individual/font/font-ibm-type1-%{version}.tar.bz2
-# Source0-md5:	1646179ff224b3e2c9b1e7f59042897f
+# Source0-md5:	ad4a8b9443f32c29a4e7001a50af17c0
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -77,7 +77,7 @@ fontpostinst Type1
 %files
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog README
-%{_fontsdir}/Type1/*.pfb
-%{_fontsdir}/Type1/afm/*.afm
+%{_fontsdir}/Type1/cour*.pfb
+%{_fontsdir}/Type1/afm/cour*.afm
 %{_fontsdir}/Type1/fonts.scale.ibm
 %{_fontsdir}/Type1/Fontmap.ibm
